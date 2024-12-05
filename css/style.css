@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    color: #B3E5FC;
+    text-shadow: 2px 2px 5px #44a2ca;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 80px;
+}
+
+#locationForm {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#location {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    width: 300px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196F3;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1976D2;
+}
+
+#result {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    margin-top: 10px;
+    color: #a0e3ff;
+    text-shadow: 2px 2px 5px #2f5785;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#result p {
+    margin: 50px 0;
+}
+
+#pokemonSprite {
+    background-color: #67abe2;
+    box-shadow: 2px 2px 5px #01e9fa;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px;
+}
