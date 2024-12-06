@@ -1,7 +1,6 @@
 const themeSwitch = document.getElementById('theme-switch');
 const body = document.body;
 
-// Alterna entre os temas ao clicar no switch
 themeSwitch.addEventListener('change', () => {
   body.classList.toggle('light');
   body.classList.toggle('dark');

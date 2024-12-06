@@ -28,13 +28,15 @@ Qualquer outra condição: Pokémon do tipo Normal.
 
 O Pokémon é selecionado de forma aleatória dentro do tipo determinado e não se repete consecutivamente.
 
+Site responsivo com a funcionalidade de troca de temas.
+
 # Tecnologias Utilizadas
 
 HTML5
 
 CSS3
 
-JavaScript (ES6+)
+JavaScript
 
 # APIs:
 
