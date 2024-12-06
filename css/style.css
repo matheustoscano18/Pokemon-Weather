@@ -27,6 +27,11 @@ body.dark #result {
   text-shadow: 2px 2px 5px #2f5785;
 }
 
+body.dark #pokemonSprite {
+  background-color: #67abe2;
+  box-shadow: 2px 2px 5px #01e9fa;
+}
+
 body.light {
   background: linear-gradient(to right, #c2e59c, #64b3f4);;
   color: #0F2027;
@@ -34,8 +39,13 @@ body.light {
 }
 
 body.light #result {
-  color: #0F2027;
+  color: #000000;
   text-shadow: 2px 2px 5px #456370;
+}
+
+body.light #pokemonSprite {
+  border: 2px solid #e2cdcd;
+  box-shadow: 2px 2px 5px #d294fc;
 }
 
 .switch {
@@ -197,10 +207,7 @@ button:hover {
 }
 
 #pokemonSprite {
-    background-color: #67abe2;
-    box-shadow: 2px 2px 5px #01e9fa;
     width: 200px;
     height: 200px;
     border-radius: 15px;
-    
 }
