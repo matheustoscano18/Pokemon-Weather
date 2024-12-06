@@ -8,9 +8,6 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #0F2027;
-    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,13 +16,141 @@ body {
     margin: 0;
 }
 
+body.dark {
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  color: #B3E5FC;
+  text-shadow: 2px 2px 5px #44a2ca;
+}
+
+body.dark #result {
+  color: #a0e3ff;
+  text-shadow: 2px 2px 5px #2f5785;
+}
+
+body.light {
+  background: linear-gradient(to right, #c2e59c, #64b3f4);;
+  color: #0F2027;
+  text-shadow: 2px 2px 5px #456370;
+}
+
+body.light #result {
+  color: #0F2027;
+  text-shadow: 2px 2px 5px #456370;
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+}
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #73C0FC;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    left: 2px;
+    bottom: 2px;
+    z-index: 2;
+    background-color: #e8e8e8;
+    transition: .4s;
+  }
+  
+  .sun svg {
+    position: absolute;
+    top: 6px;
+    left: 36px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .moon svg {
+    fill: #73C0FC;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .switch:hover .sun svg {
+    animation: rotate 15s linear infinite;
+  }
+  
+  @keyframes rotate {
+   
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* .switch:hover */.moon svg {
+    animation: tilt 5s linear infinite;
+  }
+  
+  @keyframes tilt {
+   
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    25% {
+      transform: rotate(-10deg);
+    }
+  
+    75% {
+      transform: rotate(10deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .input:checked + .slider {
+    background-color: #183153;
+  }
+  
+  .input:focus + .slider {
+    box-shadow: 0 0 1px #183153;
+  }
+  
+  .input:checked + .slider:before {
+    transform: translateX(30px);
+  }
+
 h1 {
     font-family: 'Quicksand', sans-serif;
-    color: #B3E5FC;
-    text-shadow: 2px 2px 5px #44a2ca;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 80px;
+    margin: 150px 0 80px 0;
 }
 
 #locationForm {
@@ -62,10 +187,9 @@ button:hover {
     font-family: 'Quicksand', sans-serif;
     text-align: center;
     margin-top: 10px;
-    color: #a0e3ff;
-    text-shadow: 2px 2px 5px #2f5785;
     font-size: 24px;
     font-weight: bold;
+    transition: 0.5s ease;
 }
 
 #result p {
@@ -78,4 +202,5 @@ button:hover {
     width: 200px;
     height: 200px;
     border-radius: 15px;
+    
 }

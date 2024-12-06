@@ -1,3 +1,12 @@
+const themeSwitch = document.getElementById('theme-switch');
+const body = document.body;
+
+// Alterna entre os temas ao clicar no switch
+themeSwitch.addEventListener('change', () => {
+  body.classList.toggle('light');
+  body.classList.toggle('dark');
+});
+
 const form = document.getElementById('locationForm');
 const weatherInfo = document.getElementById('weather');
 const pokemonSprite = document.getElementById('pokemonSprite');
@@ -18,7 +27,7 @@ form.addEventListener('submit', async (e) => {
 
         const temp = weatherData.main.temp;
         const weatherDescription = weatherData.weather[0].main.toLowerCase();
-        weatherInfo.textContent = `The weather in ${location} is ${temp}°C with ${weatherDescription}`;
+        weatherInfo.textContent = `The weather is ${weatherDescription} in ${location} and the temperature is ${temp}°C.`;
 
         let pokemonType;
         if (weatherDescription.includes("rain")) {
@@ -59,7 +68,7 @@ form.addEventListener('submit', async (e) => {
 
         pokemonSprite.src = selectedPokemonData.sprites.front_default;
         pokemonSprite.alt = selectedPokemonData.name;
-        pokemonName.textContent = `You got a ${selectedPokemonData.name}!`;
+        pokemonName.textContent = `You got a ${selectedPokemonData.name}, a ${selectedPokemonData.types[0].type.name} type pokemon!`;
 
     } catch (error) {
         console.error("Error:", error);
