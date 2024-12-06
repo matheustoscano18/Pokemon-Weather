@@ -1,24 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
 }
 
 body.dark {
-  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  color: #B3E5FC;
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  color: #b3e5fc;
   text-shadow: 2px 2px 5px #44a2ca;
 }
 
@@ -28,13 +28,13 @@ body.dark #result {
 }
 
 body.dark #pokemonSprite {
-  background-color: #67abe2;
+  border: 2px solid #b3e5fc;
   box-shadow: 2px 2px 5px #01e9fa;
 }
 
 body.light {
-  background: linear-gradient(to right, #c2e59c, #64b3f4);;
-  color: #0F2027;
+  background: linear-gradient(to right, #c2e59c, #64b3f4);
+  color: #0f2027;
   text-shadow: 2px 2px 5px #456370;
 }
 
@@ -55,159 +55,214 @@ body.light #pokemonSprite {
   width: 64px;
   height: 34px;
 }
-  
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #73C0FC;
-    transition: .4s;
-    border-radius: 30px;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 30px;
-    width: 30px;
-    border-radius: 20px;
-    left: 2px;
-    bottom: 2px;
-    z-index: 2;
-    background-color: #e8e8e8;
-    transition: .4s;
-  }
-  
-  .sun svg {
-    position: absolute;
-    top: 6px;
-    left: 36px;
-    z-index: 1;
-    width: 24px;
-    height: 24px;
-  }
-  
-  .moon svg {
-    fill: #73C0FC;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    z-index: 1;
-    width: 24px;
-    height: 24px;
-  }
-  
-  .switch:hover .sun svg {
-    animation: rotate 15s linear infinite;
-  }
-  
-  @keyframes rotate {
-   
-    0% {
-      transform: rotate(0);
-    }
-  
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
-  /* .switch:hover */.moon svg {
-    animation: tilt 5s linear infinite;
-  }
-  
-  @keyframes tilt {
-   
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    25% {
-      transform: rotate(-10deg);
-    }
-  
-    75% {
-      transform: rotate(10deg);
-    }
-  
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-  
-  .input:checked + .slider {
-    background-color: #183153;
-  }
-  
-  .input:focus + .slider {
-    box-shadow: 0 0 1px #183153;
-  }
-  
-  .input:checked + .slider:before {
-    transform: translateX(30px);
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #73c0fc;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: 0.4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73c0fc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.switch:hover .sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
   }
 
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */
+.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #183153;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
+}
+
 h1 {
-    font-family: 'Quicksand', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 150px 0 80px 0;
+  font-family: "Quicksand", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 150px 0 80px 0;
 }
 
 #locationForm {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 #location {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    font-size: 16px;
-    width: 300px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+  width: 300px;
 }
 
 button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #2196F3;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2196f3;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #1976D2;
+  background-color: #1976d2;
 }
 
 #result {
-    font-family: 'Quicksand', sans-serif;
-    text-align: center;
-    margin-top: 10px;
-    font-size: 24px;
-    font-weight: bold;
-    transition: 0.5s ease;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  transition: 0.5s ease;
 }
 
 #result p {
-    margin: 50px 0;
+  margin: 50px 0;
 }
 
 #pokemonSprite {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  #pokemonSprite {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 20px;
+    margin: 100px 0 40px 0;
+  }
+
+  #result {
+    font-size: 16px;
+  }
+
+  #result p {
+    margin: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 16px;
+    margin: 80px 0 20px 0;
+  }
+
+  #pokemonSprite {
+    width: 100px;
+    height: 100px;
+  }
+
+  #location {
     width: 200px;
-    height: 200px;
-    border-radius: 15px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  #result {
+    font-size: 14px;
+  }
+
 }
